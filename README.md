@@ -46,13 +46,33 @@ Note: `Rgraphviz` requires additional installation steps from Bioconductor. Plea
 1.  **Place your data:** Put the `cvdgt.txt` file into the `data/` directory.
 2.  **Configure the analysis:** Open the `scripts/config.R` file and adjust the parameters if needed. The default settings are based on the original study.
 3.  **Run the latent model script:** Execute the `scripts/latentModel.R` script. This script will perform the main analysis and generate the ground truth and synthetic data samples in the `results/` directory.
-    ```R
+    ```sh
     Rscript scripts/latentModel.R
     ```
 4.  **Run the tables and figures script:** Execute the `scripts/tables_figures.R` script. This script will perform the comparison analysis and generate the tables and figures. The function calls at the end of the script are commented out. You can uncomment them to run the specific experiments you are interested in.
-    ```R
+    ```sh
     Rscript scripts/tables_figures.R
     ```
+
+## Testing
+
+This project uses the `testthat` package for unit testing. The tests are located in the `tests/testthat/` directory.
+
+### Installing `testthat`
+
+If you don't have `testthat` installed, you can install it from CRAN:
+
+```R
+install.packages("testthat")
+```
+
+### Running Tests
+
+To run all the unit tests, you can execute the `run_tests.R` script from the project root directory:
+
+```sh
+Rscript tests/run_tests.R
+```
 
 ## Scripts Description
 
